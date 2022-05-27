@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import PrinceImg from '../../images/prince-md-final-banner.png';
 import Typical from 'react-typical';
+import ColorLensIcon from '@mui/icons-material/ColorLens';
 
 const Home = () => {
+  const switchButton = document.querySelector('.switch');
+  const allColor = document.querySelector('#colorPlate');
+
+  const [colorPlate, setColorPlate] = useState(true);
+
   return (
     <Container>
       <Content>
@@ -41,6 +47,29 @@ const Home = () => {
             priiincemuhammad@gmail.com
           </a>
         </Gmail>
+        <Colorswitch id="colorPlate" className={colorPlate ? 'close' : 'open'}>
+          <div className="header">
+            <p>Choose your color</p>
+            <button
+              className="switch"
+              onClick={() => setColorPlate(!colorPlate)}
+            >
+              <ColorLensIcon />
+            </button>
+          </div>
+          <div className="allButtons">
+            <button onClick={() => setColorPlate(!colorPlate)}></button>
+            <button onClick={() => setColorPlate(!colorPlate)}></button>
+            <button onClick={() => setColorPlate(!colorPlate)}></button>
+            <button onClick={() => setColorPlate(!colorPlate)}></button>
+            <button onClick={() => setColorPlate(!colorPlate)}></button>
+            <button onClick={() => setColorPlate(!colorPlate)}></button>
+            <button onClick={() => setColorPlate(!colorPlate)}></button>
+            <button onClick={() => setColorPlate(!colorPlate)}></button>
+            <button onClick={() => setColorPlate(!colorPlate)}></button>
+            <button onClick={() => setColorPlate(!colorPlate)}></button>
+          </div>
+        </Colorswitch>
       </Content>
     </Container>
   );
@@ -50,6 +79,12 @@ const Container = styled.section`
   width: 100%;
   height: 100vh;
   display: flex;
+  .close {
+    left: -202px;
+  }
+  .open {
+    left: 0px;
+  }
 `;
 const Content = styled.div`
   width: 1140px;
@@ -129,6 +164,78 @@ const Gmail = styled.div`
       height: 1px;
       margin: 0px auto;
       background-color: #fff;
+    }
+  }
+`;
+const Colorswitch = styled.div`
+  position: absolute;
+  top: 14rem;
+  z-index: 20;
+  transition: 0.5s;
+  .header {
+    background: #1e2326;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      font-size: 20px;
+      padding: 0px 8px;
+    }
+    .switch {
+      border: none;
+      outline: none;
+      color: #fff;
+      padding: 10px;
+      background: #1cba5a;
+      cursor: pointer;
+      svg {
+        font-size: 31px;
+      }
+    }
+  }
+  .allButtons {
+    width: 68%;
+    background: #1e2326;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 15px;
+    button {
+      width: 100%;
+      height: 27px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    button:nth-child(1) {
+      background: #1cba5a;
+    }
+    button:nth-child(2) {
+      background: #f07f81;
+    }
+    button:nth-child(3) {
+      background: #1a7bb7;
+    }
+    button:nth-child(4) {
+      background: #b738e8;
+    }
+    button:nth-child(5) {
+      background: #ff2138;
+    }
+    button:nth-child(6) {
+      background: #64ffda;
+    }
+    button:nth-child(7) {
+      background: #2c88eb;
+    }
+    button:nth-child(8) {
+      background: #ff3355;
+    }
+    button:nth-child(9) {
+      background: #f5d066;
+    }
+    button:nth-child(10) {
+      background: #b886ff;
     }
   }
 `;

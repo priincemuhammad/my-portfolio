@@ -7,8 +7,19 @@ const Header = () => {
   const [showMenu, setMenue] = useState(false);
   const [menuButton, setmenuButton] = useState(true);
 
+  window.addEventListener('scroll', () => {
+    const myMenu = document.querySelector('#mainMenu');
+    const scrollsHeight = window.scrollY;
+    console.log(scrollsHeight);
+    if (scrollsHeight > 50) {
+      myMenu.classList.add('menuBgadd');
+    } else {
+      myMenu.classList.remove('menuBgadd');
+    }
+  });
+
   return (
-    <Container id="hide">
+    <Container id="mainMenu">
       <Content>
         {/*logo*/}
         <Logo>

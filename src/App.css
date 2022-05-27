@@ -6,14 +6,19 @@
 
 body{
   background: #252B2F;
+  background: #0A192F;
 }
 
 div{
   font-size: 30px;
-  color: #fff;
-  
+  color: #fff; 
 }
  
+.menuBgadd{
+  background: #252B2F !important;
+}
   
- 
+.menuBgremove{
+  background: transparent !important;
+}
  
