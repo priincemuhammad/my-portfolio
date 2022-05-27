@@ -5,9 +5,6 @@ import Typical from 'react-typical';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 
 const Home = () => {
-  const switchButton = document.querySelector('.switch');
-  const allColor = document.querySelector('#colorPlate');
-
   const [colorPlate, setColorPlate] = useState(true);
 
   return (
@@ -15,18 +12,20 @@ const Home = () => {
       <Content>
         <Text>
           <p>
-            I'm
+            I m
             <Typical
               loop={Infinity}
               wrapper="b"
-              steps={[' React.js Developer', 3000, ' Front-End Expert', 3000]}
+              steps={[' React js Developer', 3000, ' Front End Expert', 3000]}
             />
           </p>
           <div>
             <h1>Prince Muhammad</h1>
           </div>
           <div>
-            <a href="#">Divcover More</a>
+            <a href="/" rel="noopener noreferrer">
+              Divcover More
+            </a>
           </div>
         </Text>
         <Profileback>
@@ -35,7 +34,7 @@ const Home = () => {
           </Profile>
         </Profileback>
         <ScrollDown>
-          <a href="#">
+          <a href="/" rel="noopener noreferrer">
             <div className="scroll">Scroll Down</div>
             <div className="mouse">
               <div className="whell"></div>
@@ -43,7 +42,11 @@ const Home = () => {
           </a>
         </ScrollDown>
         <Gmail>
-          <a href="https://priiincemuhammad@gmail.com" target="_blank">
+          <a
+            href="https://priiincemuhammad@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             priiincemuhammad@gmail.com
           </a>
         </Gmail>

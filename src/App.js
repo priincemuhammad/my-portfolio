@@ -8,10 +8,12 @@ import Projects from './components/projects/Projects';
 import Start from './components/start/Start';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
+import Global from '@mui/styled-engine-sc/GlobalStyles/GlobalStyles';
 
 function App() {
   return (
     <div className="App">
+      <Global />
       <Header />
       <Home />
       <About />

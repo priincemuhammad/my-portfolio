@@ -68,38 +68,77 @@ const Header = () => {
             <a
               href="#home"
               className="active"
-              onClick={() => setMenue(!showMenu)}
+              onClick={() => {
+                setMenue(!showMenu);
+                setmenuButton(!menuButton);
+              }}
             >
               Home
             </a>
           </Links>
           <Links>
-            <a href="#about" onClick={() => setMenue(!showMenu)}>
+            <a
+              href="#about"
+              onClick={() => {
+                setMenue(!showMenu);
+                setmenuButton(!menuButton);
+              }}
+            >
               About
             </a>
           </Links>
           <Links>
-            <a href="#experience" onClick={() => setMenue(!showMenu)}>
+            <a
+              href="#experience"
+              onClick={() => {
+                setMenue(!showMenu);
+                setmenuButton(!menuButton);
+              }}
+            >
               Resume
             </a>
           </Links>
           <Links>
-            <a href="#services" onClick={() => setMenue(!showMenu)}>
+            <a
+              href="#services"
+              onClick={() => {
+                setMenue(!showMenu);
+                setmenuButton(!menuButton);
+              }}
+            >
               Services
             </a>
           </Links>
           <Links>
-            <a href="#projects" onClick={() => setMenue(!showMenu)}>
+            <a
+              href="#projects"
+              onClick={() => {
+                setMenue(!showMenu);
+                setmenuButton(!menuButton);
+              }}
+            >
               Projects
             </a>
           </Links>
           <Links>
-            <a href="#blog" onClick={() => setMenue(!showMenu)}>
+            <a
+              href="#blog"
+              onClick={() => {
+                setMenue(!showMenu);
+                setmenuButton(!menuButton);
+              }}
+            >
               Blog
             </a>
           </Links>
           <Links>
-            <a href="#contact" onClick={() => setMenue(!showMenu)}>
+            <a
+              href="#contact"
+              onClick={() => {
+                setMenue(!showMenu);
+                setmenuButton(!menuButton);
+              }}
+            >
               Contact
             </a>
           </Links>
@@ -228,7 +267,7 @@ const MobileMenu = styled.div`
   transform-origin: top;
   position: absolute;
   width: 250px;
-  background: #1e2326;
+  background: #0a192f;
   top: 0px;
   right: 0px;
   padding-bottom: 15px;
