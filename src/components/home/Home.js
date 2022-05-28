@@ -4,12 +4,14 @@ import PrinceImg from '../../images/prince-md-final-banner.png';
 import Typical from 'react-typical';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 
-const Home = () => {
+const Home = ({ setNewTheme }) => {
   const [colorPlate, setColorPlate] = useState(true);
 
   return (
     <Container>
+      {/*wrapper*/}
       <Content>
+        {/*homw text*/}
         <Text>
           <p>
             I m
@@ -28,28 +30,32 @@ const Home = () => {
             </a>
           </div>
         </Text>
+        {/*homw image*/}
         <Profileback>
           <Profile>
             <img src={PrinceImg} alt="Prince'sImg" />
           </Profile>
         </Profileback>
+        {/*scroll down*/}
         <ScrollDown>
-          <a href="/" rel="noopener noreferrer">
+          <a href="#about" rel="noopener noreferrer">
             <div className="scroll">Scroll Down</div>
             <div className="mouse">
               <div className="whell"></div>
             </div>
           </a>
         </ScrollDown>
+        {/*rotate gmail*/}
         <Gmail>
           <a
-            href="https://priiincemuhammad@gmail.com"
+            href="mailto:priiincemuhammad@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             priiincemuhammad@gmail.com
           </a>
         </Gmail>
+        {/*color switch buttons*/}
         <Colorswitch id="colorPlate" className={colorPlate ? 'close' : 'open'}>
           <div className="header">
             <p>Choose your color</p>
@@ -61,16 +67,66 @@ const Home = () => {
             </button>
           </div>
           <div className="allButtons">
-            <button onClick={() => setColorPlate(!colorPlate)}></button>
-            <button onClick={() => setColorPlate(!colorPlate)}></button>
-            <button onClick={() => setColorPlate(!colorPlate)}></button>
-            <button onClick={() => setColorPlate(!colorPlate)}></button>
-            <button onClick={() => setColorPlate(!colorPlate)}></button>
-            <button onClick={() => setColorPlate(!colorPlate)}></button>
-            <button onClick={() => setColorPlate(!colorPlate)}></button>
-            <button onClick={() => setColorPlate(!colorPlate)}></button>
-            <button onClick={() => setColorPlate(!colorPlate)}></button>
-            <button onClick={() => setColorPlate(!colorPlate)}></button>
+            <button
+              onClick={() => {
+                setColorPlate(!colorPlate);
+                setNewTheme('themeOne');
+              }}
+            ></button>
+            <button
+              onClick={() => {
+                setColorPlate(!colorPlate);
+                setNewTheme('themeTwo');
+              }}
+            ></button>
+            <button
+              onClick={() => {
+                setColorPlate(!colorPlate);
+                setNewTheme('themeThree');
+              }}
+            ></button>
+            <button
+              onClick={() => {
+                setColorPlate(!colorPlate);
+                setNewTheme('themeFour');
+              }}
+            ></button>
+            <button
+              onClick={() => {
+                setColorPlate(!colorPlate);
+                setNewTheme('themeFive');
+              }}
+            ></button>
+            <button
+              onClick={() => {
+                setColorPlate(!colorPlate);
+                setNewTheme('themeSix');
+              }}
+            ></button>
+            <button
+              onClick={() => {
+                setColorPlate(!colorPlate);
+                setNewTheme('themeSeven');
+              }}
+            ></button>
+            <button
+              onClick={() => {
+                setColorPlate(!colorPlate);
+                setNewTheme('themeEight');
+              }}
+            ></button>
+            <button
+              onClick={() => {
+                setColorPlate(!colorPlate);
+                setNewTheme('themeNine');
+              }}
+            ></button>
+            <button
+              onClick={() => {
+                setColorPlate(!colorPlate);
+                setNewTheme('themeTen');
+              }}
+            ></button>
           </div>
         </Colorswitch>
       </Content>
@@ -92,8 +148,7 @@ const Container = styled.section`
 const Content = styled.div`
   width: 1140px;
   margin: auto;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding: 50px;
 `;
 const ScrollDown = styled.div`
   position: absolute;
@@ -146,13 +201,14 @@ const ScrollDown = styled.div`
   }
 `;
 const Gmail = styled.div`
-  position: absolute;
+  position: fixed;
   bottom: 14rem;
   right: -50px;
   transform: rotate(90deg);
+  z-index: 99999;
   a {
     text-decoration: none;
-    color: #fff;
+    color: var(--white-color);
     font-size: 14px;
     font-family: monospace;
     position: relative;
@@ -166,17 +222,17 @@ const Gmail = styled.div`
       right: -115px;
       height: 1px;
       margin: 0px auto;
-      background-color: #fff;
+      background-color: var(--white-color);
     }
   }
 `;
 const Colorswitch = styled.div`
-  position: absolute;
+  position: fixed;
   top: 14rem;
   z-index: 20;
   transition: 0.5s;
   .header {
-    background: #1e2326;
+    background: var(--mobileMenu);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,9 +243,9 @@ const Colorswitch = styled.div`
     .switch {
       border: none;
       outline: none;
-      color: #fff;
+      color: var(--body-color);
       padding: 10px;
-      background: #1cba5a;
+      background: var(--main-color);
       cursor: pointer;
       svg {
         font-size: 31px;
@@ -198,7 +254,7 @@ const Colorswitch = styled.div`
   }
   .allButtons {
     width: 68%;
-    background: #1e2326;
+    background: var(--mobileMenu);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
@@ -211,7 +267,7 @@ const Colorswitch = styled.div`
       cursor: pointer;
     }
     button:nth-child(1) {
-      background: #1cba5a;
+      background: #64ffda;
     }
     button:nth-child(2) {
       background: #f07f81;
@@ -226,7 +282,7 @@ const Colorswitch = styled.div`
       background: #ff2138;
     }
     button:nth-child(6) {
-      background: #64ffda;
+      background: #1cba5a;
     }
     button:nth-child(7) {
       background: #2c88eb;
@@ -275,14 +331,14 @@ const Text = styled.div`
         height: 10px;
         bottom: -5px;
         right: -5px;
-        background-color: #1cba5a;
+        background: var(--main-color);
       }
     }
     a {
       text-decoration: none;
       color: #fff;
-      background-color: #1cba5a;
-      border: 1px solid #1cba5a;
+      background: var(--main-color);
+      border: 1px solid var(--main-color);
       text-align: center;
       border-radius: 0;
       padding: 10px 25px;
@@ -293,6 +349,24 @@ const Text = styled.div`
       transition: all 0.5s ease-in-out;
       user-select: none;
       pointer-events: auto;
+    }
+    a {
+      color: var(--main-color);
+      border: 1px solid var(--main-color);
+      border-radius: 3px;
+      padding: 1.25rem 1.75rem;
+      font-size: 14px;
+      font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono',
+        'Lucida Console', Monaco, monospace;
+      line-height: 1;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+      margin-top: 50px;
+      background: var(--button-bg);
+      &:hover {
+        letter-spacing: 1px;
+      }
     }
   }
 `;

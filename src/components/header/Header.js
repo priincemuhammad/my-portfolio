@@ -38,19 +38,18 @@ const Header = () => {
             <a href="#about">About</a>
           </Links>
           <Links>
-            <a href="#experience">Resume</a>
+            <a href="#experience">Experience</a>
           </Links>
           <Links>
-            <a href="#services">Services</a>
-          </Links>
-          <Links>
-            <a href="#projects">Projects</a>
-          </Links>
-          <Links>
-            <a href="#blog">Blog</a>
+            <a href="#works">Works</a>
           </Links>
           <Links>
             <a href="#contact">Contact</a>
+          </Links>
+          <Links>
+            <a href="#resume" className="resume">
+              Resume
+            </a>
           </Links>
         </Menu>
         {/*mobile menu icon*/}
@@ -169,7 +168,7 @@ const Content = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px !important;
+  padding: 20px 50px !important;
   font-family: 'Poppins', sans-serif;
 `;
 const Logo = styled.h1`
@@ -179,21 +178,21 @@ const Logo = styled.h1`
   letter-spacing: 1px;
   align-items: center;
   a {
-    color: #fff;
+    color: var(--white-color);
     text-decoration: none;
   }
   span {
     font-size: 30px;
     font-weight: 800;
     letter-spacing: 1px;
-    color: #1cba5a;
+    color: var(--main-color);
     margin-right: -10px;
   }
 `;
 
 const Menu = styled.div`
   .active {
-    color: #1cba5a !important;
+    color: var(--main-color) !important;
   }
   .active::after {
     content: '';
@@ -204,7 +203,7 @@ const Menu = styled.div`
     transition: all 0.3s ease-in-out;
     transform: translate(-50%, 0) translateZ(0);
     width: 100%;
-    background: #1cba5a;
+    background: var(--main-color);
   }
   @media (max-width: 992px) {
     display: none;
@@ -219,7 +218,7 @@ const Links = styled.span`
   line-height: 1.7;
   position: relative;
   & > a {
-    color: #fff;
+    color: var(--white-color);
     text-decoration: none;
     position: relative;
     transition: all 0.3s ease-in-out;
@@ -232,12 +231,33 @@ const Links = styled.span`
       transition: all 0.3s ease-in-out;
       transform: translate(-50%, 0) translateZ(0);
       width: 0px;
-      background: #1cba5a;
+      background: var(--main-color);
     }
     &:hover {
-      color: #1cba5a;
+      color: var(--main-color);
       &::after {
         width: 100%;
+      }
+    }
+  }
+  .resume {
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 3px;
+    padding: 0.8rem 1.75rem;
+    font-size: 14px;
+    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono',
+      'Lucida Console', Monaco, monospace;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    margin-top: 50px;
+    background: var(--button-bg);
+    &:hover {
+      letter-spacing: 1px;
+      &::after {
+        width: 0%;
       }
     }
   }
@@ -267,7 +287,7 @@ const MobileMenu = styled.div`
   transform-origin: top;
   position: absolute;
   width: 250px;
-  background: #0a192f;
+  background: var(--mobileMenu);
   top: 0px;
   right: 0px;
   padding-bottom: 15px;
@@ -287,7 +307,7 @@ const MobileMenu = styled.div`
       padding-left: 30px;
       position: relative;
       &:hover {
-        color: #1cba5a;
+        color: var(--main-color);
         &::after {
           width: 0%;
         }
@@ -295,7 +315,7 @@ const MobileMenu = styled.div`
     }
   }
   .active {
-    color: #1cba5a !important;
+    color: var(--main-color) !important;
   }
   .active::after {
     content: '';
@@ -307,7 +327,7 @@ const MobileMenu = styled.div`
     transition: all 0.3s ease-in-out;
     transform: translate(-50%, 0) translateZ(0);
     width: 100%;
-    background: #1cba5a;
+    background: var(--main-color);
   }
 `;
 

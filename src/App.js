@@ -1,4 +1,5 @@
-import './App.css';
+import React, { useState } from 'react';
+import { useEffect } from 'react';
 import Header from '../src/components/header/Header';
 import Home from './components/home/Home';
 import About from './components/about/About';
@@ -8,14 +9,17 @@ import Projects from './components/projects/Projects';
 import Start from './components/start/Start';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
-import Global from '@mui/styled-engine-sc/GlobalStyles/GlobalStyles';
 
 function App() {
+  const [theme, setTheme] = useState('themeOne');
+
+  useEffect(() => {
+    document.documentElement.className = theme;
+  }, [theme]);
   return (
     <div className="App">
-      <Global />
-      <Header />
-      <Home />
+      <Header setNewTheme={setTheme} />
+      <Home setNewTheme={setTheme} />
       <About />
       <Counter />
       <Services />
