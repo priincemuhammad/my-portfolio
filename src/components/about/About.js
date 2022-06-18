@@ -5,7 +5,7 @@ const About = () => {
   return (
     <Maincontent id="about">
       <Container>
-        <h1>About Me</h1>
+        <h1>Get to know me</h1>
         <Content>
           <Texts>
             <div>
@@ -24,7 +24,9 @@ const About = () => {
                 and have also been awarded 75% Merit Scholarship(Top 10%) by my
                 college.
               </p>
-              <p>Here are a few of the other activities that I love to do!</p>
+              <p>
+                Here are a few technologies I’ve been working with recently:
+              </p>
             </div>
             <ul>
               <li>JavaScript (ES6+)</li>

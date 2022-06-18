@@ -9,18 +9,20 @@ import Projects from './components/projects/Projects';
 import Start from './components/start/Start';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
-
+import Experiences from './components/experience/Experiences';
 function App() {
   const [theme, setTheme] = useState('themeOne');
-
   useEffect(() => {
     document.documentElement.className = theme;
   }, [theme]);
+
+  console.log('hi');
   return (
     <div className="App">
       <Header setNewTheme={setTheme} />
       <Home setNewTheme={setTheme} />
       <About />
+      <Experiences />
       <Counter />
       <Services />
       <Projects />

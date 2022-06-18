@@ -25,8 +25,12 @@ const Home = ({ setNewTheme }) => {
             <h1>Prince Muhammad</h1>
           </div>
           <div>
-            <a href="/" rel="noopener noreferrer">
-              Divcover More
+            <a
+              href="mailto:priiincemuhammad@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get In Touch
             </a>
           </div>
         </Text>
@@ -313,6 +317,7 @@ const Text = styled.div`
     padding-bottom: 30px;
     font-weight: 900;
     top: 0;
+    color: #b5b5b5;
   }
   div {
     display: block;
@@ -365,7 +370,7 @@ const Text = styled.div`
       margin-top: 50px;
       background: var(--button-bg);
       &:hover {
-        letter-spacing: 1px;
+        background: var(--button-hover);
       }
     }
   }

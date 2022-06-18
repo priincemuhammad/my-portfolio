@@ -94,7 +94,7 @@ const Header = () => {
                 setmenuButton(!menuButton);
               }}
             >
-              Resume
+              Experience
             </a>
           </Links>
           <Links>
@@ -105,29 +105,7 @@ const Header = () => {
                 setmenuButton(!menuButton);
               }}
             >
-              Services
-            </a>
-          </Links>
-          <Links>
-            <a
-              href="#projects"
-              onClick={() => {
-                setMenue(!showMenu);
-                setmenuButton(!menuButton);
-              }}
-            >
-              Projects
-            </a>
-          </Links>
-          <Links>
-            <a
-              href="#blog"
-              onClick={() => {
-                setMenue(!showMenu);
-                setmenuButton(!menuButton);
-              }}
-            >
-              Blog
+              Works
             </a>
           </Links>
           <Links>
@@ -139,6 +117,11 @@ const Header = () => {
               }}
             >
               Contact
+            </a>
+          </Links>
+          <Links>
+            <a href="#resume" className="resume">
+              Resume
             </a>
           </Links>
         </MobileMenu>
@@ -173,7 +156,7 @@ const Content = styled.nav`
 `;
 const Logo = styled.h1`
   font-family: 'Poppins', sans-serif;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 800;
   letter-spacing: 1px;
   align-items: center;
@@ -194,7 +177,7 @@ const Menu = styled.div`
   .active {
     color: var(--main-color) !important;
   }
-  .active::after {
+  /* .active::after {
     content: '';
     position: absolute;
     height: 3px;
@@ -204,7 +187,7 @@ const Menu = styled.div`
     transform: translate(-50%, 0) translateZ(0);
     width: 100%;
     background: var(--main-color);
-  }
+  } */
   @media (max-width: 992px) {
     display: none;
   }
@@ -213,8 +196,9 @@ const Links = styled.span`
   text-decoration: none;
   font-weight: 600;
   padding: 5px 15px;
+  padding: 10px;
   font-family: 'Roboto Mono', monospace;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.7;
   position: relative;
   & > a {
@@ -222,7 +206,7 @@ const Links = styled.span`
     text-decoration: none;
     position: relative;
     transition: all 0.3s ease-in-out;
-    &::after {
+    /* &::after {
       content: '';
       position: absolute;
       height: 3px;
@@ -238,16 +222,13 @@ const Links = styled.span`
       &::after {
         width: 100%;
       }
-    }
+    } */
   }
   .resume {
     color: var(--main-color);
     border: 1px solid var(--main-color);
     border-radius: 3px;
     padding: 0.8rem 1.75rem;
-    font-size: 14px;
-    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono',
-      'Lucida Console', Monaco, monospace;
     line-height: 1;
     text-decoration: none;
     cursor: pointer;
@@ -255,10 +236,50 @@ const Links = styled.span`
     margin-top: 50px;
     background: var(--button-bg);
     &:hover {
-      letter-spacing: 1px;
+      background: var(--button-hover);
       &::after {
         width: 0%;
       }
+    }
+  }
+  &:nth-child(1) {
+    a::before {
+      content: '01.';
+      margin-right: 5px;
+      color: var(--main-color);
+      font-size: var(--fz-xxs);
+    }
+  }
+  &:nth-child(2) {
+    a::before {
+      content: '02.';
+      margin-right: 5px;
+      color: var(--main-color);
+      font-size: var(--fz-xxs);
+    }
+  }
+  &:nth-child(3) {
+    a::before {
+      content: '03.';
+      margin-right: 5px;
+      color: var(--main-color);
+      font-size: var(--fz-xxs);
+    }
+  }
+  &:nth-child(4) {
+    a::before {
+      content: '04.';
+      margin-right: 5px;
+      color: var(--main-color);
+      font-size: var(--fz-xxs);
+    }
+  }
+  &:nth-child(5) {
+    a::before {
+      content: '05.';
+      margin-right: 5px;
+      color: var(--main-color);
+      font-size: var(--fz-xxs);
     }
   }
   @media (max-width: 992px) {
@@ -290,7 +311,7 @@ const MobileMenu = styled.div`
   background: var(--mobileMenu);
   top: 0px;
   right: 0px;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
   padding-top: 55px;
   display: flex;
   justify-content: center;
@@ -328,6 +349,10 @@ const MobileMenu = styled.div`
     transform: translate(-50%, 0) translateZ(0);
     width: 100%;
     background: var(--main-color);
+  }
+  .resume {
+    display: inline;
+    margin-left: 30px;
   }
 `;
 
