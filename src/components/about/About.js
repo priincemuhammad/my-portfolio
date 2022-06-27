@@ -66,7 +66,7 @@ const Maincontent = styled.section`
 `;
 
 const Container = styled.div`
-  max-width: 1140px;
+  width: 1140px;
   visibility: visible;
   opacity: 1;
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
@@ -84,6 +84,7 @@ const Container = styled.div`
     width: 100%;
     font-size: clamp(26px, 5vw, 30px);
     color: #ccd6f6;
+    white-space: nowrap;
     &::before {
       position: relative;
       bottom: 0px;
@@ -217,7 +218,7 @@ const Princeimg = styled.div`
     left: 20px;
     z-index: -1;
     box-sizing: inherit;
-    transition: all 0.5s;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
   &:hover {
     &::after {

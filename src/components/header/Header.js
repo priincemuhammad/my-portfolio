@@ -10,7 +10,6 @@ const Header = () => {
   window.addEventListener('scroll', () => {
     const myMenu = document.querySelector('#mainMenu');
     const scrollsHeight = window.scrollY;
-    console.log(scrollsHeight);
     if (scrollsHeight > 50) {
       myMenu.classList.add('menuBgadd');
     } else {
@@ -23,7 +22,7 @@ const Header = () => {
       <Content>
         {/*logo*/}
         <Logo>
-          <a href="#home">
+          <a href="#home" rel="noopener noreferrer">
             <span>PRINCE </span>MUHAMMAD
           </a>
         </Logo>
@@ -244,7 +243,7 @@ const Links = styled.span`
   }
   &:nth-child(1) {
     a::before {
-      content: '01.';
+      content: '00.';
       margin-right: 5px;
       color: var(--main-color);
       font-size: var(--fz-xxs);
@@ -252,7 +251,7 @@ const Links = styled.span`
   }
   &:nth-child(2) {
     a::before {
-      content: '02.';
+      content: '01.';
       margin-right: 5px;
       color: var(--main-color);
       font-size: var(--fz-xxs);
@@ -260,7 +259,7 @@ const Links = styled.span`
   }
   &:nth-child(3) {
     a::before {
-      content: '03.';
+      content: '02.';
       margin-right: 5px;
       color: var(--main-color);
       font-size: var(--fz-xxs);
@@ -268,7 +267,7 @@ const Links = styled.span`
   }
   &:nth-child(4) {
     a::before {
-      content: '04.';
+      content: '03.';
       margin-right: 5px;
       color: var(--main-color);
       font-size: var(--fz-xxs);
@@ -276,7 +275,7 @@ const Links = styled.span`
   }
   &:nth-child(5) {
     a::before {
-      content: '05.';
+      content: '04.';
       margin-right: 5px;
       color: var(--main-color);
       font-size: var(--fz-xxs);

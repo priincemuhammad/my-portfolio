@@ -5,8 +5,8 @@ export const Gobalstyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: 'Roboto Mono', monospace;
-  }
-
+}
+  
   :root{
     --body-color: #0A192F;
     --main-color: #1cba5a;
@@ -72,15 +72,15 @@ export const Gobalstyles = createGlobalStyle`
   }
 
   ::-webkit-scrollbar{
-    width:12px;
+    width: 7px;
  }
  
  ::-webkit-scrollbar-track{
-   border: 10px solid #dce7f5;
+   border: 5px solid   var(--body-color);
  }
  
  ::-webkit-scrollbar-thumb{
-    background: var(--main-color);
+    background: #495670;
    border-radius: 10px;
  }
 

@@ -44,7 +44,7 @@ const Experiences = () => {
               className={toggleButtons === 4 ? 'tabs active' : 'tabs'}
               onClick={() => toggleTab(4)}
             >
-              Cyber71
+              Microsoft
             </button>
             <button
               className={toggleButtons === 5 ? 'tabs active' : 'tabs'}
@@ -56,7 +56,7 @@ const Experiences = () => {
               className={toggleButtons === 6 ? 'tabs active' : 'tabs'}
               onClick={() => toggleTab(6)}
             >
-              Netflix
+              Amazon
             </button>
           </Buttons>
           <Text
@@ -115,7 +115,6 @@ const Experiences = () => {
               producers, and clients on a daily basis
             </p>
           </Text>
-
           <Text
             className={toggleButtons === 3 ? 'text activeText' : 'text'}
             onClick={() => toggleTab(3)}
@@ -214,7 +213,7 @@ const Container = styled.section`
   display: flex;
 `;
 const Content = styled.section`
-  max-width: 1140px;
+  width: 1140px;
   margin: 0 auto;
   padding: 100px 50px;
   .text {
@@ -233,6 +232,7 @@ const Content = styled.section`
     width: 100%;
     font-size: clamp(26px, 5vw, 30px);
     color: #ccd6f6;
+    white-space: nowrap;
     &::before {
       position: relative;
       bottom: 0px;
@@ -319,6 +319,11 @@ import Experiences from './Experiences';
   }
 `;
 const Text = styled.section`
+  i {
+    &:hover {
+      color: var(--main-color);
+    }
+  }
   h3 {
     font-size: 22px;
     font-weight: 800;

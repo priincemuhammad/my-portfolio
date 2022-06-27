@@ -16,16 +16,15 @@ function App() {
     document.documentElement.className = theme;
   }, [theme]);
 
-  console.log('hi');
   return (
     <div className="App">
       <Header setNewTheme={setTheme} />
       <Home setNewTheme={setTheme} />
       <About />
       <Experiences />
+      <Projects />
       <Counter />
       <Services />
-      <Projects />
       <Start />
       <Contact />
       <Footer />
