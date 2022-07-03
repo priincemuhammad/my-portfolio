@@ -70,7 +70,6 @@ const Content = styled.div`
   position: relative;
   @media (max-width: 992px) {
     grid-template-columns: 1fr;
-    padding: 100px 50px;
   }
 `;
 
@@ -144,7 +143,10 @@ const Info = styled.div`
   z-index: 2;
   @media (max-width: 992px) {
     text-align: left;
-    width: 100%;
+  }
+
+  @media (max-width: 992px) {
+    padding: 30px 20px !important;
   }
 `;
 
@@ -161,6 +163,11 @@ const Infoheader = styled.div`
     font-weight: 600;
     line-height: 1.1;
     font-size: clamp(24px, 5vw, 28px);
+  }
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 20px;
+    }
   }
 `;
 
@@ -183,6 +190,9 @@ const Descriptions = styled.div`
     padding: 0px;
     background-color: transparent;
   }
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 const Infofooter = styled.div`
@@ -194,7 +204,6 @@ const Infofooter = styled.div`
       font-size: 13px;
       color: var(--main-color);
       margin-left: 20px;
-      white-space: nowrap;
     }
     a {
       text-decoration: none;

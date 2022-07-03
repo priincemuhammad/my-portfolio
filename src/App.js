@@ -7,7 +7,7 @@ import Services from './components/services/Services';
 import Counter from './components/counter/Counterup';
 import Projects from './components/projects/Projects';
 import Start from './components/start/Start';
-import Contact from './components/contact/Contact';
+import Networtyprojects from './components/networthyPrjct/Networthyprojects';
 import Footer from './components/footer/Footer';
 import Experiences from './components/experience/Experiences';
 function App() {
@@ -23,10 +23,10 @@ function App() {
       <About />
       <Experiences />
       <Projects />
+      <Networtyprojects />
       <Counter />
       <Services />
       <Start />
-      <Contact />
       <Footer />
     </div>
   );

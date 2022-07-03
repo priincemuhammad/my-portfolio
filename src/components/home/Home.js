@@ -229,6 +229,9 @@ const Gmail = styled.div`
       background-color: var(--white-color);
     }
   }
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 const Colorswitch = styled.div`
   position: fixed;
@@ -374,6 +377,12 @@ const Text = styled.div`
       }
     }
   }
+  @media (max-width: 570px) {
+    h1 {
+      flex-wrap: nowrap !important;
+      font-size: 30px;
+    }
+  }
 `;
 const Profileback = styled.div`
   position: absolute;
@@ -403,7 +412,7 @@ const Profile = styled.div`
   }
   @media (max-width: 570px) {
     img {
-      transform: translateX(-30%);
+      transform: translateX(0%);
     }
   }
 `;

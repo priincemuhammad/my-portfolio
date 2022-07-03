@@ -159,6 +159,7 @@ const Logo = styled.h1`
   font-weight: 800;
   letter-spacing: 1px;
   align-items: center;
+  display: flex;
   a {
     color: var(--white-color);
     text-decoration: none;
@@ -169,6 +170,12 @@ const Logo = styled.h1`
     letter-spacing: 1px;
     color: var(--main-color);
     margin-right: -10px;
+  }
+  @media (max-width: 470px) {
+    a,
+    span {
+      font-size: 20px;
+    }
   }
 `;
 
@@ -296,7 +303,8 @@ const MobileMenuIcon = styled.div`
     transition: 0.5s ease;
   }
   @media (max-width: 992px) {
-    display: block;
+    display: grid;
+    place-items: center;
   }
 `;
 

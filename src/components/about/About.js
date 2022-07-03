@@ -19,7 +19,7 @@ const About = () => {
               <p>
                 I am a member of{' '}
                 <a href="/" rel="noopener noreferrer">
-                  Fn's Softwares Club
+                  Fn's Softwares
                 </a>{' '}
                 and have also been awarded 75% Merit Scholarship(Top 10%) by my
                 college.
@@ -106,17 +106,18 @@ const Container = styled.div`
       margin-left: 20px;
       background-color: #233554;
     }
-    @media (max-width: 774px) {
+  }
+  @media (max-width: 992px) {
+    padding-right: 60px;
+  }
+  @media (max-width: 774px) {
+    h1 {
       &::after {
         width: 20%;
       }
+      font-size: 20px;
     }
-  }
-  /* @media (max-width: 1170px) {
-    padding: 100px;
-  } */
-  @media (max-width: 992px) {
-    padding-right: 60px;
+    padding: 100px 20px;
   }
 `;
 const Content = styled.div`
@@ -130,7 +131,7 @@ const Content = styled.div`
   @media (max-width: 992px) {
     grid-gap: 10px;
   }
-  @media (max-width: 774px) {
+  @media (max-width: 768px) {
     grid-gap: 60px;
     grid-template-columns: 1fr;
   }
@@ -177,6 +178,12 @@ const Texts = styled.div`
   }
   @media (max-width: 1170px) {
     padding-right: 0px;
+  }
+  @media (max-width: 768px) {
+    p,
+    a {
+      font-size: 16px;
+    }
   }
 `;
 

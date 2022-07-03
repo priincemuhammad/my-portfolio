@@ -254,11 +254,15 @@ const Content = styled.section`
       margin-left: 20px;
       background-color: #233554;
     }
-    @media (max-width: 774px) {
+  }
+  @media (max-width: 768px) {
+    .heading {
       &::after {
         width: 20%;
       }
+      font-size: 20px;
     }
+    padding: 100px 20px !important;
   }
 `;
 const Textparent = styled.div`
@@ -307,15 +311,13 @@ const Buttons = styled.section`
     background: var(--button-bg);
   }
   @media (max-width: 774px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    flex-direction: row !important;
+    overflow-x: scroll;
     button {
       border-left: 0px !important;
       border-top: 2px solid #8892b0 !important;
       text-align: center !important;
-    }import Services from './../services/Services';
-import Experiences from './Experiences';
-
+    }
   }
 `;
 const Text = styled.section`
@@ -361,6 +363,14 @@ const Text = styled.section`
       padding-right: 0px;
     }
   }
+  @media (max-width: 768px) {
+    h3 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
 `;
 const Allskills = styled.div`
   display: grid;
@@ -371,6 +381,12 @@ const Allskills = styled.div`
     i {
       font-size: 4rem;
     }
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr !important;
+  }
+  @media (max-width: 570px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
   }
 `;
 
