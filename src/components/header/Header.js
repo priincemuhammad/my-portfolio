@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { Fade, Bounce } from 'react-reveal';
 
 const Header = () => {
   const [showMenu, setMenue] = useState(false);
@@ -19,112 +20,121 @@ const Header = () => {
 
   return (
     <Container id="mainMenu">
-      <Content>
-        {/*logo*/}
-        <Logo>
-          <a href="#home" rel="noopener noreferrer">
-            <span>PRINCE </span>MUHAMMAD
-          </a>
-        </Logo>
-        {/*desktop menu*/}
-        <Menu>
-          <Links>
-            <a href="#home" className="active">
-              Home
+      <Bounce top>
+        <Content>
+          {/*logo*/}
+          <Logo>
+            <a href="#home" rel="noopener noreferrer">
+              <span>PRINCE </span>MUHAMMAD
             </a>
-          </Links>
-          <Links>
-            <a href="#about">About</a>
-          </Links>
-          <Links>
-            <a href="#experience">Experience</a>
-          </Links>
-          <Links>
-            <a href="#works">Works</a>
-          </Links>
-          <Links>
-            <a href="#contact">Contact</a>
-          </Links>
-          <Links>
-            <a href="#resume" className="resume">
-              Resume
-            </a>
-          </Links>
-        </Menu>
-        {/*mobile menu icon*/}
-        <MobileMenuIcon
-          onClick={() => {
-            setMenue(!showMenu);
-            setmenuButton(!menuButton);
-          }}
-        >
-          {menuButton ? <MenuIcon /> : <CloseIcon />}
-        </MobileMenuIcon>
-        {/*mobile menu*/}
-        <MobileMenu className={showMenu ? 'showMobileMenu' : 'hideMobileMenu'}>
-          <Links>
-            <a
-              href="#home"
-              className="active"
-              onClick={() => {
-                setMenue(!showMenu);
-                setmenuButton(!menuButton);
-              }}
-            >
-              Home
-            </a>
-          </Links>
-          <Links>
-            <a
-              href="#about"
-              onClick={() => {
-                setMenue(!showMenu);
-                setmenuButton(!menuButton);
-              }}
-            >
-              About
-            </a>
-          </Links>
-          <Links>
-            <a
-              href="#experience"
-              onClick={() => {
-                setMenue(!showMenu);
-                setmenuButton(!menuButton);
-              }}
-            >
-              Experience
-            </a>
-          </Links>
-          <Links>
-            <a
-              href="#services"
-              onClick={() => {
-                setMenue(!showMenu);
-                setmenuButton(!menuButton);
-              }}
-            >
-              Works
-            </a>
-          </Links>
-          <Links>
-            <a
-              href="#contact"
-              onClick={() => {
-                setMenue(!showMenu);
-                setmenuButton(!menuButton);
-              }}
-            >
-              Contact
-            </a>
-          </Links>
-          <Links>
-            <a href="#resume" className="resume">
-              Resume
-            </a>
-          </Links>
-        </MobileMenu>
-      </Content>
+          </Logo>
+          {/*desktop menu*/}
+
+          <Menu>
+            <Links>
+              <a href="#home" className="activeee">
+                Home
+              </a>
+            </Links>
+            <Links>
+              <a href="#about">About</a>
+            </Links>
+            <Links>
+              <a href="#experience">Experience</a>
+            </Links>
+            <Links>
+              <a href="#works">Works</a>
+            </Links>
+            <Links>
+              <a href="#contact">Contact</a>
+            </Links>
+
+            <Links>
+              <Bounce bottom>
+                <a href="#resume" className="resume">
+                  Resume
+                </a>
+              </Bounce>
+            </Links>
+          </Menu>
+
+          {/*mobile menu icon*/}
+          <MobileMenuIcon
+            onClick={() => {
+              setMenue(!showMenu);
+              setmenuButton(!menuButton);
+            }}
+          >
+            {menuButton ? <MenuIcon /> : <CloseIcon />}
+          </MobileMenuIcon>
+          {/*mobile menu*/}
+          <MobileMenu
+            className={showMenu ? 'showMobileMenu' : 'hideMobileMenu'}
+          >
+            <Links>
+              <a
+                href="#home"
+                className="activeee"
+                onClick={() => {
+                  setMenue(!showMenu);
+                  setmenuButton(!menuButton);
+                }}
+              >
+                Home
+              </a>
+            </Links>
+            <Links>
+              <a
+                href="#about"
+                onClick={() => {
+                  setMenue(!showMenu);
+                  setmenuButton(!menuButton);
+                }}
+              >
+                About
+              </a>
+            </Links>
+            <Links>
+              <a
+                href="#experience"
+                onClick={() => {
+                  setMenue(!showMenu);
+                  setmenuButton(!menuButton);
+                }}
+              >
+                Experience
+              </a>
+            </Links>
+            <Links>
+              <a
+                href="#services"
+                onClick={() => {
+                  setMenue(!showMenu);
+                  setmenuButton(!menuButton);
+                }}
+              >
+                Works
+              </a>
+            </Links>
+            <Links>
+              <a
+                href="#contact"
+                onClick={() => {
+                  setMenue(!showMenu);
+                  setmenuButton(!menuButton);
+                }}
+              >
+                Contact
+              </a>
+            </Links>
+            <Links>
+              <a href="#resume" className="resume">
+                Resume
+              </a>
+            </Links>
+          </MobileMenu>
+        </Content>
+      </Bounce>
     </Container>
   );
 };
@@ -344,7 +354,9 @@ const MobileMenu = styled.div`
   }
   .active {
     color: var(--main-color) !important;
-  }
+  }import Fade from './../../../node_modules/react-reveal/src/in-and-out/Fade';
+import Bounce from './../../../node_modules/react-reveal/src/in-and-out/Bounce';
+
   .active::after {
     content: '';
     position: absolute;

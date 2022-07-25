@@ -6,6 +6,11 @@ export const Gobalstyles = createGlobalStyle`
     padding: 0;
     font-family: 'Roboto Mono', monospace;
 }
+
+::selection {
+  color: #C2CDEC;
+  background: #233554;
+}
   
   :root{
     --body-color: #0A192F;

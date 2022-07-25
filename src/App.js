@@ -3,10 +3,8 @@ import { useEffect } from 'react';
 import Header from '../src/components/header/Header';
 import Home from './components/home/Home';
 import About from './components/about/About';
-import Services from './components/services/Services';
-import Counter from './components/counter/Counterup';
 import Projects from './components/projects/Projects';
-import Start from './components/start/Start';
+import Sayhello from './components/Sayhello/Sayhello';
 import Networtyprojects from './components/networthyPrjct/Networthyprojects';
 import Footer from './components/footer/Footer';
 import Experiences from './components/experience/Experiences';
@@ -24,9 +22,7 @@ function App() {
       <Experiences />
       <Projects />
       <Networtyprojects />
-      <Counter />
-      <Services />
-      <Start />
+      <Sayhello />
       <Footer />
     </div>
   );

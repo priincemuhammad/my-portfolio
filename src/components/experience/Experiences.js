@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Fade, Bounce } from 'react-reveal';
 
 export const Singleskills = (props) => {
   return (
-    <div>
-      <i class={props.icons}></i>
-    </div>
+    <Fade right>
+      <div>
+        <i class={props.icons}></i>
+      </div>
+    </Fade>
   );
 };
 
@@ -17,57 +20,75 @@ const Experiences = () => {
   };
 
   return (
-    <Container>
+    <Container id="experience">
       <Content>
-        <h1 className="heading">Experience</h1>
+        <Bounce top>
+          <h1 className="heading">Experience</h1>
+        </Bounce>
         <Textparent>
           <Buttons>
-            <button
-              className={toggleButtons === 1 ? 'tabs active' : 'tabs'}
-              onClick={() => toggleTab(1)}
-            >
-              Skills
-            </button>
-            <button
-              className={toggleButtons === 2 ? 'tabs active' : 'tabs'}
-              onClick={() => toggleTab(2)}
-            >
-              Education
-            </button>
-            <button
-              className={toggleButtons === 3 ? 'tabs active' : 'tabs'}
-              onClick={() => toggleTab(3)}
-            >
-              Experience
-            </button>
-            <button
-              className={toggleButtons === 4 ? 'tabs active' : 'tabs'}
-              onClick={() => toggleTab(4)}
-            >
-              Microsoft
-            </button>
-            <button
-              className={toggleButtons === 5 ? 'tabs active' : 'tabs'}
-              onClick={() => toggleTab(5)}
-            >
-              KS Devware
-            </button>
-            <button
-              className={toggleButtons === 6 ? 'tabs active' : 'tabs'}
-              onClick={() => toggleTab(6)}
-            >
-              Amazon
-            </button>
+            <Fade bottom>
+              <button
+                className={toggleButtons === 1 ? 'tabs active' : 'tabs'}
+                onClick={() => toggleTab(1)}
+              >
+                Skills
+              </button>
+            </Fade>
+            <Fade bottom>
+              <button
+                className={toggleButtons === 2 ? 'tabs active' : 'tabs'}
+                onClick={() => toggleTab(2)}
+              >
+                Education
+              </button>
+            </Fade>
+            <Fade bottom>
+              <button
+                className={toggleButtons === 3 ? 'tabs active' : 'tabs'}
+                onClick={() => toggleTab(3)}
+              >
+                Experience
+              </button>
+            </Fade>
+            <Fade bottom>
+              <button
+                className={toggleButtons === 4 ? 'tabs active' : 'tabs'}
+                onClick={() => toggleTab(4)}
+              >
+                Microsoft
+              </button>
+            </Fade>
+            <Fade bottom>
+              <button
+                className={toggleButtons === 5 ? 'tabs active' : 'tabs'}
+                onClick={() => toggleTab(5)}
+              >
+                KS Devware
+              </button>
+            </Fade>
+            <Fade bottom>
+              <button
+                className={toggleButtons === 6 ? 'tabs active' : 'tabs'}
+                onClick={() => toggleTab(6)}
+              >
+                Amazon
+              </button>
+            </Fade>
           </Buttons>
           <Text
             className={toggleButtons === 1 ? 'text activeText' : 'text'}
             onClick={() => toggleTab(1)}
           >
-            <h3>My Technical Skills</h3>
-            <p>
-              "What really matters, is the depth of your heart and the strength
-              of your character"
-            </p>
+            <Fade bottom>
+              <h3>My Technical Skills</h3>
+            </Fade>
+            <Fade bottom>
+              <p>
+                "What really matters, is the depth of your heart and the
+                strength of your character"
+              </p>
+            </Fade>
             <Allskills>
               <Singleskills icons={'devicon-html5-plain-wordmark'} />
               <Singleskills icons={'devicon-css3-plain-wordmark'} />

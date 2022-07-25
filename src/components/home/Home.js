@@ -3,36 +3,43 @@ import styled from 'styled-components';
 import PrinceImg from '../../images/prince-md-final-banner.png';
 import Typical from 'react-typical';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
+import { Fade, Bounce } from 'react-reveal';
 
 const Home = ({ setNewTheme }) => {
   const [colorPlate, setColorPlate] = useState(true);
 
   return (
-    <Container>
+    <Container id="home">
       {/*wrapper*/}
       <Content>
         {/*homw text*/}
         <Text>
-          <p>
-            I m
-            <Typical
-              loop={Infinity}
-              wrapper="b"
-              steps={[' React js Developer', 3000, ' Front End Expert', 3000]}
-            />
-          </p>
-          <div>
-            <h1>Prince Muhammad</h1>
-          </div>
-          <div>
-            <a
-              href="mailto:priiincemuhammad@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Get In Touch
-            </a>
-          </div>
+          <Fade bottom>
+            <p>
+              I m
+              <Typical
+                loop={Infinity}
+                wrapper="b"
+                steps={[' React js Developer', 3000, ' Front End Expert', 3000]}
+              />
+            </p>
+          </Fade>
+          <Fade bottom>
+            <div>
+              <h1>Prince Muhammad</h1>
+            </div>
+          </Fade>
+          <Fade bottom>
+            <div>
+              <a
+                href="mailto:priiincemuhammad@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get In Touch
+              </a>
+            </div>
+          </Fade>
         </Text>
         {/*homw image*/}
         <Profileback>
@@ -41,16 +48,20 @@ const Home = ({ setNewTheme }) => {
           </Profile>
         </Profileback>
         {/*scroll down*/}
+
         <ScrollDown>
-          <a href="#about" rel="noopener noreferrer">
-            <div className="scroll">Scroll Down</div>
-            <div className="mouse">
-              <div className="whell"></div>
-            </div>
-          </a>
+          <Bounce bottom>
+            <a href="#about" rel="noopener noreferrer">
+              <div className="scroll">Scroll Down</div>
+              <div className="mouse">
+                <div className="whell"></div>
+              </div>
+            </a>
+          </Bounce>
         </ScrollDown>
+
         {/*rotate gmail*/}
-        <Gmail>
+        {/* <Gmail>
           <a
             href="mailto:priiincemuhammad@gmail.com"
             target="_blank"
@@ -58,18 +69,20 @@ const Home = ({ setNewTheme }) => {
           >
             priiincemuhammad@gmail.com
           </a>
-        </Gmail>
+        </Gmail> */}
         {/*color switch buttons*/}
         <Colorswitch id="colorPlate" className={colorPlate ? 'close' : 'open'}>
-          <div className="header">
-            <p>Choose your color</p>
-            <button
-              className="switch"
-              onClick={() => setColorPlate(!colorPlate)}
-            >
-              <ColorLensIcon />
-            </button>
-          </div>
+          <Fade left>
+            <div className="header">
+              <p>Choose your color</p>
+              <button
+                className="switch"
+                onClick={() => setColorPlate(!colorPlate)}
+              >
+                <ColorLensIcon />
+              </button>
+            </div>
+          </Fade>
           <div className="allButtons">
             <button
               onClick={() => {
@@ -204,35 +217,37 @@ const ScrollDown = styled.div`
     }
   }
 `;
-const Gmail = styled.div`
-  position: fixed;
-  bottom: 14rem;
-  right: -50px;
-  transform: rotate(90deg);
-  z-index: 99999;
-  a {
-    text-decoration: none;
-    color: var(--white-color);
-    font-size: 14px;
-    font-family: monospace;
-    position: relative;
-    letter-spacing: 2px;
-    &::after {
-      content: '';
-      display: block;
-      width: 91px;
-      position: absolute;
-      bottom: 0.5rem;
-      right: -115px;
-      height: 1px;
-      margin: 0px auto;
-      background-color: var(--white-color);
-    }
-  }
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
+
+// const Gmail = styled.div`
+//   position: fixed;
+//   bottom: 14rem;
+//   right: -50px;
+//   transform: rotate(90deg);
+//   z-index: 99999;
+//   a {
+//     text-decoration: none;
+//     color: var(--white-color);
+//     font-size: 14px;
+//     font-family: monospace;
+//     position: relative;
+//     letter-spacing: 2px;
+//     &::after {
+//       content: '';
+//       display: block;
+//       width: 91px;
+//       position: absolute;
+//       bottom: 0.5rem;
+//       right: -115px;
+//       height: 1px;
+//       margin: 0px auto;
+//       background-color: var(--white-color);
+//     }
+//   }
+//   @media (max-width: 768px) {
+//     display: none;
+//   }
+// `;
+
 const Colorswitch = styled.div`
   position: fixed;
   top: 14rem;

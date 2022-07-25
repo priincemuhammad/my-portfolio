@@ -1,14 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 import Singleproject from './Singleproject';
+import { Fade } from 'react-reveal';
 
 const Projects = () => {
   return (
-    <Container>
+    <Container id="works">
       <Content>
-        <h1 className="heading">Some Things I've Built</h1>
+        <Fade bottom>
+          <h1 className="heading">Some Things I've Built</h1>
+        </Fade>
         <Allprojects>
-          <Singleproject />
+          <Fade bottom>
+            <Singleproject />
+          </Fade>
+          <Fade bottom>
+            <Singleproject />
+          </Fade>
         </Allprojects>
       </Content>
     </Container>
@@ -17,6 +25,7 @@ const Projects = () => {
 
 const Container = styled.section`
   display: flex;
+  overflow-x: hidden;
 `;
 const Content = styled.div`
   width: 1140px;

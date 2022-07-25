@@ -1,59 +1,73 @@
 import React from 'react';
 import styled from 'styled-components';
 import Profileimgs from '../../images/aboutProfile.jpg';
+import { Fade, Bounce } from 'react-reveal';
+
 const About = () => {
   return (
     <Maincontent id="about">
       <Container>
-        <h1>Get to know me</h1>
+        <Fade bottom>
+          <h1>Get to know me</h1>
+        </Fade>
         <Content>
           <Texts>
             <div>
-              <p>
-                Hello! My name is Prince Muhammad and I enjoy creating new
-                things that live on the internet. My interest in web and mobile
-                app development started back in 2021 when I decided to try
-                editing custom Tumblr themes — turns out hacking together a
-                custom reblog button taught me a lot about HTML & CSS!
-              </p>
-              <p>
-                I am a member of{' '}
-                <a href="/" rel="noopener noreferrer">
-                  Fn's Softwares
-                </a>{' '}
-                and have also been awarded 75% Merit Scholarship(Top 10%) by my
-                college.
-              </p>
-              <p>
-                Here are a few technologies I’ve been working with recently:
-              </p>
+              <Fade bottom>
+                <p>
+                  Hello! My name is Prince Muhammad and I enjoy creating new
+                  things that live on the internet. My interest in web and
+                  mobile app development started back in 2021 when I decided to
+                  try editing custom Tumblr themes — turns out hacking together
+                  a custom reblog button taught me a lot about HTML & CSS!
+                </p>
+              </Fade>
+              <Fade bottom>
+                <p>
+                  I am a member of{' '}
+                  <a href="/" rel="noopener noreferrer">
+                    Fn's Softwares
+                  </a>{' '}
+                  and have also been awarded 75% Merit Scholarship(Top 10%) by
+                  my college.
+                </p>
+              </Fade>
+              <Fade bottom>
+                <p>
+                  Here are a few technologies I’ve been working with recently:
+                </p>
+              </Fade>
             </div>
-            <ul>
-              <li>JavaScript (ES6+)</li>
-              <li>TypeScript</li>
-              <li>React.js</li>
-              <li>React.Native</li>
-              <li>Node.js</li>
-              <li>WordPress</li>
-            </ul>
+            <Fade bottom>
+              <ul>
+                <li>JavaScript (ES6+)</li>
+                <li>TypeScript</li>
+                <li>React.js</li>
+                <li>React.Native</li>
+                <li>Node.js</li>
+                <li>WordPress</li>
+              </ul>
+            </Fade>
           </Texts>
-          <Aboutimgparent>
-            <Profile>
-              <Princeimg>
-                <Imgwrapper>
-                  <Mainimg>
-                    <a
-                      href="https://github.com/prince-muhammad"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <img src={Profileimgs} alt="PrinceImg" />
-                    </a>
-                  </Mainimg>
-                </Imgwrapper>
-              </Princeimg>
-            </Profile>
-          </Aboutimgparent>
+          <Fade bottom>
+            <Aboutimgparent>
+              <Profile>
+                <Princeimg>
+                  <Imgwrapper>
+                    <Mainimg>
+                      <a
+                        href="https://github.com/prince-muhammad"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <img src={Profileimgs} alt="PrinceImg" />
+                      </a>
+                    </Mainimg>
+                  </Imgwrapper>
+                </Princeimg>
+              </Profile>
+            </Aboutimgparent>
+          </Fade>
         </Content>
       </Container>
     </Maincontent>

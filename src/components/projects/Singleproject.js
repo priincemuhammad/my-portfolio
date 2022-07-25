@@ -68,6 +68,7 @@ const Content = styled.div`
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  margin-bottom: 100px;
   @media (max-width: 992px) {
     grid-template-columns: 1fr;
   }
